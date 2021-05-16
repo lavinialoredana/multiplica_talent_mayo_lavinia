@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 * {
   padding: 0;
   margin: 0;
@@ -39,7 +39,7 @@ h1 {
   align-items: center;
   margin: auto;
   width: 90%;
-  height: calc(100vh - 56px - 53px - 2rem);
+  height: calc( 100vh - 56px - 53px - 2rem);
   padding: 1rem 0;
 }
 
@@ -57,6 +57,28 @@ h1 {
 
 .color-card-container p:last-child {
   text-align: right;
+}
+
+.color-card-container * {
+  opacity: 1;
+  transition: opacity ease 3s;
+}
+
+.message-on-hover {
+  position: absolute;
+  top: 2.5rem;
+  width: calc( 100% - 2rem);
+  text-align: center;
+  opacity: 0;
+  transition: opacity ease-in 1s;
+}
+
+.color-card-container:hover * {
+  opacity: 0.2;
+}
+
+.color-card-container:hover .message-on-hover {
+  opacity: 1;
 }
 
 .color-code-container {
