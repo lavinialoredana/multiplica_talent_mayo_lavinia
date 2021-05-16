@@ -1,5 +1,68 @@
-* {
-  margin: 0;
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+*{
   padding: 0;
+  margin:0;
   box-sizing: border-box;
+  font-family: Roboto;
+
+}
+
+.main-container{
+
+   padding: 1rem;
+   background-image: linear-gradient(to top, #fddb92 0%, #d1fdff 100%);
+}
+
+.border{
+  border: 1px solid black;
+  border-radius: 8px;
+
+}
+
+header{ 
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+  margin: auto;
+
+}
+
+header img{
+height: 56px;
+}
+
+h1{
+
+  color: #fd4e02;
+
+}
+
+.cards-container{
+  width:90%;
+  height: calc( 100vh - 56px - 53px - 2rem);
+  padding: 1rem 0;
+
+}
+
+
+.footer-container{
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 0;
+  margin-bottom: 3px;
+  width: 90%;
+  margin: auto;
+
+}
+
+
+
+.last-page{
+  display: flex;
+}
+
+.next-page{
+  display: flex;
 }
