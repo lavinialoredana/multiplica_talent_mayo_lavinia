@@ -15,6 +15,6 @@ In order to run the app you have to run `npm start`.
 ### Deployed app
 
 In order to see the live app you can follow this link: 
-[http://localhost:3000](http://localhost:3000)
+[https://pacific-anchorage-54763.herokuapp.com/](https://pacific-anchorage-54763.herokuapp.com/)
 
 
