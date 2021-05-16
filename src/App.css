@@ -105,3 +105,32 @@ h1 {
 .next-page {
   display: flex;
 }
+
+/* media query for tablet devices */
+
+@media only screen and (max-width:991px) {
+  .color-card-container p, .color-card-container h3 {
+    margin: 0;
+  }
+}
+
+/* media query for mobile devices */
+
+@media only screen and (max-width:767px) {
+  header {
+    width: 100%;
+    flex-direction: column;
+  }
+  header img {
+    height: auto;
+    margin-bottom: 1rem;
+  }
+  .cards-container {
+    width: 100%;
+    height: auto;
+  }
+  .color-card-container {
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+}
