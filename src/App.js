@@ -4,14 +4,24 @@ import ColorCard from "./ColorCard";
 import Footer from "./Footer";
 import React, { useState, useEffect } from "react";
 
+
 function App() {
     const [colorCards, setColorCards] = useState([]);
+    const [page, setPage] = useState(1);
+    const [totalPage, setTotalPage] = useState(1);
 
     useEffect(() => {
-        fetch("https://reqres.in/api/colors?page=1")
+        fetch(`https://reqres.in/api/colors?page=${page}`)
             .then((response) => response.json())
-            .then((data) => setColorCards(data.data));
-    }, []);
+            .then((data) => {
+                setColorCards(data.data);
+                setTotalPage(data.total_pages);
+            });
+    }, [page]);
+
+    const changePage = (e) => {
+        e.target.innerText === "Siguiente" ? setPage(page + 1) : setPage(page - 1);
+    };
 
     return (
         <div className="main-container">
@@ -27,7 +37,7 @@ function App() {
                     ></ColorCard>
                 ))}
             </div>
-            <Footer />
+            <Footer changePage={changePage} totalPage={totalPage} page={page} />
         </div>
     );
 }

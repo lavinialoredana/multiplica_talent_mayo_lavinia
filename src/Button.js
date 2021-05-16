@@ -1,7 +1,11 @@
 import React from "react";
 
-const Button = ({ btnText }) => {
-    return <a className="btn btn-info"> {btnText} </a>;
+const Button = ({ btnText, isDisabled, changePage, totalPage }) => {
+    return (
+        <a onClick={changePage} className={`btn btn-info ${isDisabled}`}>
+            {" "}
+            {btnText}{" "}
+        </a>
+    );
 };
-
 export default Button;
