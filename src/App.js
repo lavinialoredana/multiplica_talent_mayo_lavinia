@@ -4,7 +4,6 @@ import ColorCard from "./ColorCard";
 import Footer from "./Footer";
 import React, { useState, useEffect } from "react";
 
-
 function App() {
     const [colorCards, setColorCards] = useState([]);
     const [page, setPage] = useState(1);
@@ -34,6 +33,7 @@ function App() {
                         name={card.name}
                         color={card.color}
                         pantoneValue={card.pantone_value}
+                        colorId={card.id}
                     ></ColorCard>
                 ))}
             </div>

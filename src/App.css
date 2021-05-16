@@ -81,6 +81,19 @@ h1 {
   opacity: 1;
 }
 
+.color-card-container .message-on-click {
+  opacity: 0;
+  position: absolute;
+  bottom: 2rem;
+  width: calc(100% - 2rem);
+  text-align: center;
+  font-weight: bold;
+}
+
+.color-card-container .visible {
+  opacity: 1;
+}
+
 .color-code-container {
   text-align: center;
 }
