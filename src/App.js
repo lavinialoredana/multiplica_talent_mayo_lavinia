@@ -34,7 +34,7 @@ function App() {
                         color={card.color}
                         pantoneValue={card.pantone_value}
                         colorId={card.id}
-                    ></ColorCard>
+                    />
                 ))}
             </div>
             <Footer changePage={changePage} totalPage={totalPage} page={page} />
