@@ -2,12 +2,16 @@ import React from "react";
 const ColorCard = ({ year, name, color, pantoneValue, colorId }) => {
     const copyColor = (color, id) => {
         navigator.clipboard.writeText(color);
-        document.getElementById(id).classList.toggle("visible");
+        ToggleDocument(id)
 
         setTimeout(() => {
-            document.getElementById(id).classList.toggle("visible");
+            ToggleDocument(id)
         }, 1000);
     };
+
+    function ToggleDocument(id) {
+        document.getElementById(id).classList.toggle("visible");
+    }
 
     return (
         <div

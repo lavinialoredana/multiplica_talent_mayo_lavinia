@@ -2,21 +2,20 @@ import React from "react";
 import Button from "./Button";
 
 const Footer = ({ changePage, totalPage, page }) => {
+    function CreateButton(buttonText, limit) {
+        return (
+            <Button
+                btnText={buttonText}
+                isDisabled={page === limit ? "disabled" : " "}
+                changePage={changePage}
+                totalPage={totalPage}
+            />)
+    }
+
     return (
         <div className="footer-container">
-            <Button
-                btnText="Anterior"
-                isDisabled={page === 1 ? "disabled" : " "}
-                changePage={changePage}
-                totalPage={totalPage}
-            />
-
-            <Button
-                btnText="Siguiente"
-                isDisabled={page === totalPage ? " disabled" : " "}
-                changePage={changePage}
-                totalPage={totalPage}
-            />
+            {CreateButton("Anterior", 1)}
+            {CreateButton("Siguiente", totalPage)}
         </div>
     );
 };
